@@ -52,7 +52,7 @@ int Partition(vector<T>& vec, int ini, int fin){
 			i = i + 1;
 		}
 	}  
-	int aux = vec[i];
+	T aux = vec[i];
 	vec[i] = vec[fin];
 	vec[fin] = aux;
 	return i;
