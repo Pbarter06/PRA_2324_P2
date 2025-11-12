@@ -88,36 +88,36 @@ int main() {
 
     {
         vector<int> v = datos;
-        auto start = chrono::high_resolution_clock::now();
+        auto start = chrono::system_clock::now();
         QuickSort_Ultimo(v, 0, v.size() - 1);
-        auto end = chrono::high_resolution_clock::now();
+        auto end = chrono::system_clock::now();
         chrono::duration<double, milli> dur = end - start;
         cout << "Pivote último: " << dur.count() << " ms\n";
     }
 
     {
         vector<int> v = datos;
-        auto start = chrono::high_resolution_clock::now();
+        auto start = chrono::system_clock::now();
         QuickSort_Primero(v, 0, v.size() - 1);
-        auto end = chrono::high_resolution_clock::now();
+        auto end = chrono::system_clock::now();
         chrono::duration<double, milli> dur = end - start;
         cout << "Pivote primero: " << dur.count() << " ms\n";
     }
 
     {
         vector<int> v = datos;
-        auto start = chrono::high_resolution_clock::now();
+        auto start = chrono::system_clock::now();
         QuickSort_Central(v, 0, v.size() - 1);
-        auto end = chrono::high_resolution_clock::now();
+        auto end = chrono::system_clock::now();
         chrono::duration<double, milli> dur = end - start;
         cout << "Pivote central: " << dur.count() << " ms\n";
     }
 
     {
         vector<int> v = datos;
-        auto start = chrono::high_resolution_clock::now();
+        auto start = chrono::system_clock::now();
         QuickSort_Aleatorio(v, 0, v.size() - 1);
-        auto end = chrono::high_resolution_clock::now();
+        auto end = chrono::system_clock::now();
         chrono::duration<double, milli> dur = end - start;
         cout << "Pivote aleatorio: " << dur.count() << " ms\n";
     }
