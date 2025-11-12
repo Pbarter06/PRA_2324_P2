@@ -1,10 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std; 
 
-
-int BusquedaBinaria( int x, vector<int>& a, int ini, int fin){
+template<typename T>
+int BusquedaBinaria( T x, vector<T>& a, int ini, int fin){
 	if(ini > fin){
 		cout << "No se encuentra el array";
+		
+		
 	       return -1; 	
 	}
 	
@@ -21,8 +23,8 @@ int BusquedaBinaria( int x, vector<int>& a, int ini, int fin){
 }
 
 
-
-int BusquedaBinaria_INV(int x, vector<int>& a, int ini, int fin){
+template<typename T>
+int BusquedaBinaria_INV(T x, vector<T>& a, int ini, int fin){
 	if(ini > fin){
                 cout << "No se encuentra el array";
                return -1;
@@ -38,9 +40,9 @@ int BusquedaBinaria_INV(int x, vector<int>& a, int ini, int fin){
 	}
 }
 
-
-int Partition(vector<int>& vec, int ini, int fin){
-	int x = vec[fin];
+template<typename T>
+int Partition(vector<T>& vec, int ini, int fin){
+	T x = vec[fin];
 	int i = ini;
 	for(int j = ini; j < fin; j++){
 		if(vec[j] <= x){
@@ -56,8 +58,8 @@ int Partition(vector<int>& vec, int ini, int fin){
 	return i;
 }
 
-
-void QuickSort(vector<int>& vec, int ini, int fin){
+template<typename T>
+void QuickSort(vector<T>& vec, int ini, int fin){
 	if(ini < fin){
 		int pivot = Partition(vec, ini, fin);
 		QuickSort(vec, ini, pivot - 1);

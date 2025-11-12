@@ -2,12 +2,12 @@
 #include "DyV.h"
 using namespace std; 
 
-
+template<typename T>
 int main(){
-	int valor; cin >> valor; 
-	vector<int> v; 
+	T valor; cin >> valor; 
+	vector<T> v; 
 
-	int x; 
+	T x; 
 	while(cin >> x){
 		v.push_back(x); 
 	}
@@ -25,5 +25,6 @@ int main(){
 	//reverse(v.begin(), v.end()); 
 
 	cout << "posicion en inv: " << BusquedaBinaria_INV(valor, v, 0, v.size() - 1)+ 1; 
-return 0; 
+
+	return 0; 
 }
